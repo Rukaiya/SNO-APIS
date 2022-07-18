@@ -28,10 +28,7 @@ Authentication API
    "status_code": 200,
    "message": "Successfully logged in.",
    "data": {
-       "token": "eyJhbGciOiJIUzI1NiJ9.IiQyYSQxMiRZZFdkOTdUZ0ZXUFBLUUNuUGpvbG9PZnV3dnBhamhZMXQ3VnF4TFNjUUlEZ0ZtM2ZoSEhOZSI.zUWGkcZm-55SrECarrNHH64EApY7Iz3MHyCmHM04X5M",
-       "name": "Jon",
-       "phone": "01759408190",
-        "username": "jon@agami.ltd"
+       "token": "eyJhbGciOiJIUzI1NiJ9.IiQyYSQxMiRZZFdkOTdUZ0ZXUFBLUUNuUGpvbG9PZnV3dnBhamhZMXQ3VnF4TFNjUUlEZ0ZtM2ZoSEhOZSI.zUWGkcZm-55SrECarrNHH64EApY7Iz3MHyCmHM04X5M"
    }
 }
  
@@ -259,7 +256,7 @@ Chalan send_to_fc API
   	* **Content:**
 ```json
 {  "success" : false
-   "message": "sno_chalan_id missing",
+   "message": "sno_return_chalan_id missing",
    "status_code": 400
 }
 ```
