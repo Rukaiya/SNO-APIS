@@ -36,7 +36,7 @@ Authentication API
 ```
 
 
-* ** Error Response:**
+* **Error Response:**
 * **Code:** `403`
   	* **If username or password not matched then:**
   	* **Content:**
@@ -84,7 +84,7 @@ Customer Order Pack API
 }
 ```
 
-* ** Error Response:*
+* **Error Response:**
 * **Code:** '402'
   	* **If pay_type of an order is online but not paid:**
   	* **Content:**
@@ -95,7 +95,7 @@ Customer Order Pack API
 }
 ```
 
-* ** Error Response:*
+* **Error Response:**
 * **Code:** '404'
   	* **If order not found to pack:**
   	* **Content:**
@@ -105,7 +105,7 @@ Customer Order Pack API
    "status_code": 404
 }
 ```
-* ** Error Response:*
+* **Error Response:**
 * **Code:** '404'
   	* **If order item not found:**
   	* **Content:**
@@ -116,7 +116,7 @@ Customer Order Pack API
 }
 ```
 
-* ** Error Response:*
+* **Error Response:**
 * **Code:** '406'
   	* **If order item not available in stock:**
   	* **Content:**
@@ -127,7 +127,7 @@ Customer Order Pack API
 }
 ```
 
-* ** Error Response:*
+* **Error Response:**
 * **Code:** '400'
   	* **If any error occurred which is missing any required fields then:**
   	* **Content:**
@@ -164,7 +164,7 @@ Customer Order received_form_fc API
 }
 ```
 
-* ** Error Response:*
+* **Error Response:**
 * **Code:** '404'
   	* **If order not found to pack:**
   	* **Content:**
@@ -175,7 +175,7 @@ Customer Order received_form_fc API
 }
 ```
 
-* ** Error Response:*
+* **Error Response:**
 * **Code:** '400'
   	* **If any error occurred which is missing any required fields then:**
   	* **Content:**
@@ -214,7 +214,7 @@ Return Chalan received_from_dh API
    "status_code": 200
 }
 ```
-* ** Error Response:*
+* **Error Response:**
 * **Code:** '400'
   	* **If any error occurred which is missing any required fields then:**
   	* **Content:**
@@ -225,7 +225,7 @@ Return Chalan received_from_dh API
 }
 ```
 
-* ** Error Response:*
+* **Error Response:**
 * **Code:** '404'
   	* **If order not found to pack:**
   	* **Content:**
@@ -236,7 +236,7 @@ Return Chalan received_from_dh API
 }
 ```
 
-* ** Error Response:*
+* **Error Response:**
 * **Code:** '400'
   	* **If any error occurred which is missing any required fields then:**
   	* **Content:**
