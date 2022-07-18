@@ -1,7 +1,7 @@
 # SNO-APIS
 
-BASE_URL(sandbox) = "http://api.shopoth.net/3ps",
-BASE_URL(live) = "https://api.shopoth.com/3ps"
+BASE_URL(sandbox) = "Please request for base url when you need",
+BASE_URL(live) = "Please request for base url when you need"
 
 
 Authentication API
@@ -66,7 +66,7 @@ Customer Order Pack API
 		{
 			"line_item_id": 173651, 
 			"qr_codes": [PA-115-E710-Uii-006203, PA-115-E710-Uii-006202],
-			"location_id": 100
+			"location_code": "JR-01-A-A-101"
 		}
 	]
 }
@@ -105,6 +105,16 @@ Customer Order Pack API
    "status_code": 404
 }
 ```
+* ** Error Response:*
+* **Code:** '404'
+  	* **If order item not found:**
+  	* **Content:**
+```json
+{  "success" : false
+   "message": "Item not found.",
+   "status_code": 404
+}
+```
 
 * ** Error Response:*
 * **Code:** '406'
@@ -123,13 +133,13 @@ Customer Order Pack API
   	* **Content:**
 ```json
 {  "success" : false
-   "message": "line_item_id missing",
+   "message": "{required_field} missing",
    "status_code": 400
 }
 ```
-Customer Order send_to_dh API
+Customer Order received_form_fc API
 
-* **URL**: `{BASE_URL}/api/v1/customer_orders/{order_id}/send_to_dh`
+* **URL**: `{BASE_URL}/api/v1/customer_orders/{order_id}/received_form_fc`
 
 * **Method:** `PUT`
 
@@ -140,7 +150,6 @@ Customer Order send_to_dh API
 ```
  requires :sno_chalan_id, type: Integer
  requires :order_ids, type: Array
- requires :distributor_id, type: Integer
 ```
 
 * **Success Response:**
@@ -150,7 +159,7 @@ Customer Order send_to_dh API
 ```json
  {
    "success": true,
-   "message": "successfully sent",
+   "message": "successfully received for {distributor}",
    "status_code": 200
 }
 ```
@@ -167,30 +176,19 @@ Customer Order send_to_dh API
 ```
 
 * ** Error Response:*
-* **Code:** '404'
-  	* **If Distributor not found:**
-  	* **Content:**
-```json
-{  "success" : false
-   "message": "Distributor not found",
-   "status_code": 404
-}
-```
-
-* ** Error Response:*
 * **Code:** '400'
   	* **If any error occurred which is missing any required fields then:**
   	* **Content:**
 ```json
 {  "success" : false
-   "message": "sno_chalan_id missing",
+   "message": "{required_field} missing",
    "status_code": 400
 }
 ```
 
-Chalan send_to_fc API
+Return Chalan received_from_dh API
 
-* **URL**: `{BASE_URL}/api/v1/return_chalans/send_to_fc`
+* **URL**: `{BASE_URL}/api/v1/return_chalans/received_from_dh`
 
 * **Method:** `POST`
 
@@ -202,7 +200,6 @@ Chalan send_to_fc API
  requires :sno_return_chalan_id, type: Integer
  optional :returned_order_ids, type: Array
  optional :cancelled_order_ids, type: Array
- requires :distributor_id, type: String
     
 ```
 
@@ -223,7 +220,7 @@ Chalan send_to_fc API
   	* **Content:**
 ```json
 {  "success" : false
-   "message": "Either returned_order_ids or cancelled_order_ids required for making the return chalan",
+   "message": "Returned_order_ids and Cancelled_order_ids are both empty",
    "status_code": 400
 }
 ```
@@ -235,17 +232,6 @@ Chalan send_to_fc API
 ```json
 {  "success" : false
    "message": "Order not found",
-   "status_code": 404
-}
-```
-
-* ** Error Response:*
-* **Code:** '404'
-  	* **If Distributor not found:**
-  	* **Content:**
-```json
-{  "success" : false
-   "message": "Distributor not found",
    "status_code": 404
 }
 ```
