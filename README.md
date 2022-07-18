@@ -28,7 +28,8 @@ Authentication API
    "status_code": 200,
    "message": "Successfully logged in.",
    "data": {
-       "token": "eyJhbGciOiJIUzI1NiJ9.IiQyYSQxMiRZZFdkOTdUZ0ZXUFBLUUNuUGpvbG9PZnV3dnBhamhZMXQ3VnF4TFNjUUlEZ0ZtM2ZoSEhOZSI.zUWGkcZm-55SrECarrNHH64EApY7Iz3MHyCmHM04X5M"
+       "token": "eyJhbGciOiJIUzI1NiJ9.IiQyYSQxMiRZZFdkOTdUZ0ZXUFBLUUNuUGpvbG9PZnV3dnBhamhZMXQ3VnF4TFNjUUlEZ0ZtM2ZoSEhOZSI.zUWGkcZm-55SrECarrNHH64EApY7Iz3MHyCmHM04X5M",
+       "expired_at": "2022-10-18T18:04:50.489+06:00"
    }
 }
  
@@ -81,6 +82,16 @@ Customer Order Pack API
    "success": true,
    "message": "successfully packed",
    "status_code": 200
+}
+```
+* **Error Response:**
+* **Code:**  `401`
+  	* **If authorization token expired or wrong:**
+  	* **Content:**
+```json
+{
+   "message": "Unauthorized access",
+   "status_code": 401
 }
 ```
 
@@ -163,6 +174,16 @@ Customer Order received_form_fc API
    "status_code": 200
 }
 ```
+* **Error Response:**
+* **Code:**  `401`
+  	* **If authorization token expired or wrong:**
+  	* **Content:**
+```json
+{
+   "message": "Unauthorized access",
+   "status_code": 401
+}
+```
 
 * **Error Response:**
 * **Code:** `404`
@@ -214,6 +235,18 @@ Return Chalan received_from_dh API
    "status_code": 200
 }
 ```
+
+* **Error Response:**
+* **Code:**  `401`
+  	* **If authorization token expired or wrong:**
+  	* **Content:**
+```json
+{ 
+   "message": "Unauthorized access",
+   "status_code": 401
+}
+```
+
 * **Error Response:**
 * **Code:** `400`
   	* **If any error occurred which is missing any required fields then:**
