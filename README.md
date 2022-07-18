@@ -65,7 +65,7 @@ Customer Order Pack API
 	"packed_items": [
 		{
 			"line_item_id": 173651, 
-			"qr_codes": [PA-115-E710-Uii-006203, PA-115-E710-Uii-006202],
+			"qr_code": "PA-115-E710-Uii-006203",
 			"location_code": "JR-01-A-A-101"
 		}
 	]
@@ -139,9 +139,9 @@ Customer Order Pack API
 ```
 Customer Order received_form_fc API
 
-* **URL**: `{BASE_URL}/api/v1/customer_orders/{order_id}/received_form_fc`
+* **URL**: `{BASE_URL}/api/v1/chalans`
 
-* **Method:** `PUT`
+* **Method:** `POST`
 
 *  **Headers:**
 	 `Authorization: token`
@@ -188,7 +188,7 @@ Customer Order received_form_fc API
 
 Return Chalan received_from_dh API
 
-* **URL**: `{BASE_URL}/api/v1/return_chalans/received_from_dh`
+* **URL**: `{BASE_URL}/api/v1/return_chalans`
 
 * **Method:** `POST`
 
