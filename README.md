@@ -130,7 +130,7 @@ Customer Order Pack API
    "status_code": 400
 }
 ```
-Customer Order in_transit_to_dh API
+Customer Order send_to_dh API
 
 * **URL**: `{BASE_URL}/api/v1/customer_orders/{order_id}/send_to_dh`
 
@@ -142,7 +142,7 @@ Customer Order in_transit_to_dh API
 *  **Request Parameters:**
 ```
  requires :sno_chalan_id, type: Integer
- requires :order_id, type: Array
+ requires :order_ids, type: Array
  requires :distributor_id, type: Integer
 ```
 
@@ -191,9 +191,9 @@ Customer Order in_transit_to_dh API
 }
 ```
 
-Customer Order Return chalan API
+Chalan send_to_fc API
 
-* **URL**: `{BASE_URL}/api/v1/customer_orders/send_to_fc`
+* **URL**: `{BASE_URL}/api/v1/return_chalans/send_to_fc`
 
 * **Method:** `POST`
 
@@ -203,8 +203,9 @@ Customer Order Return chalan API
 *  **Request Parameters:**
 ```
  requires :sno_return_chalan_id, type: Integer
- requires :order_id, type: Array
- requires :distributor_name, type: String
+ optional :returned_order_ids, type: Array
+ optional :cancelled_order_ids, type: Array
+ requires :distributor_id, type: String
     
 ```
 
@@ -217,6 +218,16 @@ Customer Order Return chalan API
    "success": true,
    "message": "successfully sent",
    "status_code": 200
+}
+```
+* ** Error Response:*
+* **Code:** '400'
+  	* **If any error occurred which is missing any required fields then:**
+  	* **Content:**
+```json
+{  "success" : false
+   "message": "Either returned_order_ids or cancelled_order_ids required for making the return chalan",
+   "status_code": 400
 }
 ```
 
@@ -252,4 +263,3 @@ Customer Order Return chalan API
    "status_code": 400
 }
 ```
-
