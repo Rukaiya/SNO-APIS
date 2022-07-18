@@ -85,7 +85,7 @@ Customer Order Pack API
 ```
 
 * **Error Response:**
-* **Code:** '402'
+* **Code:**  `402`
   	* **If pay_type of an order is online but not paid:**
   	* **Content:**
 ```json
@@ -96,7 +96,7 @@ Customer Order Pack API
 ```
 
 * **Error Response:**
-* **Code:** '404'
+* **Code:** `404`
   	* **If order not found to pack:**
   	* **Content:**
 ```json
@@ -106,7 +106,7 @@ Customer Order Pack API
 }
 ```
 * **Error Response:**
-* **Code:** '404'
+* **Code:** `404`
   	* **If order item not found:**
   	* **Content:**
 ```json
@@ -117,7 +117,7 @@ Customer Order Pack API
 ```
 
 * **Error Response:**
-* **Code:** '406'
+* **Code:** `406`
   	* **If order item not available in stock:**
   	* **Content:**
 ```json
@@ -128,7 +128,7 @@ Customer Order Pack API
 ```
 
 * **Error Response:**
-* **Code:** '400'
+* **Code:** `400`
   	* **If any error occurred which is missing any required fields then:**
   	* **Content:**
 ```json
@@ -165,7 +165,7 @@ Customer Order received_form_fc API
 ```
 
 * **Error Response:**
-* **Code:** '404'
+* **Code:** `404`
   	* **If order not found to pack:**
   	* **Content:**
 ```json
@@ -176,7 +176,7 @@ Customer Order received_form_fc API
 ```
 
 * **Error Response:**
-* **Code:** '400'
+* **Code:** `400`
   	* **If any error occurred which is missing any required fields then:**
   	* **Content:**
 ```json
@@ -215,7 +215,7 @@ Return Chalan received_from_dh API
 }
 ```
 * **Error Response:**
-* **Code:** '400'
+* **Code:** `400`
   	* **If any error occurred which is missing any required fields then:**
   	* **Content:**
 ```json
@@ -226,7 +226,7 @@ Return Chalan received_from_dh API
 ```
 
 * **Error Response:**
-* **Code:** '404'
+* **Code:** `404`
   	* **If order not found to pack:**
   	* **Content:**
 ```json
@@ -237,7 +237,7 @@ Return Chalan received_from_dh API
 ```
 
 * **Error Response:**
-* **Code:** '400'
+* **Code:** `400`
   	* **If any error occurred which is missing any required fields then:**
   	* **Content:**
 ```json
