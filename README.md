@@ -159,7 +159,7 @@ Customer Order received_form_fc API
 	 
 *  **Request Parameters:**
 ```
- requires :sno_chalan_id, type: Integer
+ optional :sno_chalan_id, type: Integer
  requires :order_ids, type: Array
 ```
 
@@ -218,7 +218,7 @@ Return Chalan received_from_dh API
 	 
 *  **Request Parameters:**
 ```
- requires :sno_return_chalan_id, type: Integer
+ optional :sno_return_chalan_id, type: Integer
  optional :returned_order_ids, type: Array
  optional :cancelled_order_ids, type: Array
     
