@@ -67,7 +67,8 @@ Customer Order Pack API
 		{
 			"line_item_id": 173651, 
 			"qr_code": "PA-115-E710-Uii-006203",
-			"location_code": "JR-01-A-A-101"
+			"location_code": "JR-01-A-A-101",
+			"quantity": 20,
 		}
 	]
 }
