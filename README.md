@@ -38,13 +38,13 @@ Authentication API
 
 
 * **Error Response:**
-* **Code:** `403`
+* **Code:** `406`
   	* **If username or password not matched then:**
   	* **Content:**
 ```json
 {
    "success": false,
-   "status_code": 403,
+   "status_code": 406,
    "message": "Invalid username or password",
    "data": []
 }
