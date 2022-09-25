@@ -151,7 +151,7 @@ Customer Order Pack API
 ```
 Customer Order received_form_fc API
 
-* **URL**: `{BASE_URL}/api/v1/challans`
+* **URL**: `{BASE_URL}/api/v1/chalans`
 
 * **Method:** `POST`
 
@@ -210,7 +210,7 @@ Customer Order received_form_fc API
 
 Return Chalan received_from_dh API
 
-* **URL**: `{BASE_URL}/api/v1/return_challans`
+* **URL**: `{BASE_URL}/api/v1/return_chalans`
 
 * **Method:** `POST`
 
@@ -278,5 +278,65 @@ Return Chalan received_from_dh API
 {  "success" : false
    "message": "{required_field} missing",
    "status_code": 400
+}
+```
+Dispatch Challan
+
+* **URL**: `{BASE_URL}/api/v1/challans/:id/dispatch`
+
+* **Method:** `PUT`
+
+*  **Headers:**
+	 `Authorization: token`
+	 
+*  **Request Parameters:**
+```
+```
+
+* **Success Response:**
+* **Code:** `200`
+  	* **Content:**
+
+```json
+ {
+   "success": true,
+   "message": "Challan dispatch successfully",
+   "status_code": 200,
+   "data": true
+}
+```
+* **Error Response:**
+* **Code:**  `401`
+  	* **If authorization token expired or wrong:**
+  	* **Content:**
+```json
+{
+   "message": "Unauthorized access",
+   "status_code": 401
+}
+```
+
+* **Error Response:**
+* **Code:** `422`
+  	* **If challan status is not initiated:**
+  	* **Content:**
+```json
+{  {
+    "success": false,
+    "status": 422,
+    "message": "Unable to dispatch challan due to: only initiated can perform dispatch",
+    "data": {}
+  }
+}
+```
+* **Error Response:**
+* **Code:** `404`
+  	* **If challan not found:**
+  	* **Content:**
+```json
+{  "success" : false
+   "message": "Challan not found",
+   "status_code": 404,
+   "data": {}
 }
 ```
