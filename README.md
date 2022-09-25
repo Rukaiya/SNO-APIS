@@ -151,7 +151,7 @@ Customer Order Pack API
 ```
 Customer Order received_form_fc API
 
-* **URL**: `{BASE_URL}/api/v1/chalans`
+* **URL**: `{BASE_URL}/api/v1/challans`
 
 * **Method:** `POST`
 
@@ -210,7 +210,7 @@ Customer Order received_form_fc API
 
 Return Chalan received_from_dh API
 
-* **URL**: `{BASE_URL}/api/v1/return_chalans`
+* **URL**: `{BASE_URL}/api/v1/return_challans`
 
 * **Method:** `POST`
 
